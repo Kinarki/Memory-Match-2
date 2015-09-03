@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Doctor Who Match Game</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+<body>
+	<header>
+			<div class="container">
+				<div class="game-menu">
+					<img id="logo" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/logo.jpg?raw=true">
+					<h1 id="title">Doctor Who Match Game</h1>
+					<button id="reset" type="reset" value="Reset">Reset</button>
+
+			</div>
+	</header>
+	<div>
+		<div id="sidebar">
+			<h2>Statistics</h2>
+			<p>Time played:<span id="time"></span></p>
+			<p>Number of flips:<span id="tries"></span></p>
+			<p>Accuracy:<span id="accuracy"></span></p>
+			<button id="music" src="http://thechaffers.com/who.mp3">Start Music</button>
+
+		</div>
+		<div id="game">
+			<div class="card">
+				<img class="front" id="cf1" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cf1.jpg">
+				<img class="back" id="cb1" onclick="cardClick(1)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf2" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cf1.jpg">
+				<img class="back" id="cb2" onclick="cardClick(2)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf3" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cf2.png">
+				<img class="back" id="cb3" onclick="cardClick(3)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf4" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cf2.png">
+				<img class="back" id="cb4" onclick="cardClick(4)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf5" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf3.png?raw=true">
+				<img class="back" id="cb5" onclick="cardClick(5)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf6" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf3.png?raw=true">
+				<img class="back" id="cb6" onclick="cardClick(6)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf7" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf4.png?raw=true">
+				<img class="back" id="cb7" onclick="cardClick(7)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf8" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf4.png?raw=true">
+				<img class="back" id="cb8" onclick="cardClick(8)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf9" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf5.png?raw=true">
+				<img class="back" id="cb9" onclick="cardClick(9)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf10" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf5.png?raw=true">
+				<img class="back" id="cb10" onclick="cardClick(10)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf11" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf6.png?raw=true">
+				<img class="back" id="cb11" onclick="cardClick(11)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf12" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf6.png?raw=true">
+				<img class="back" id="cb12" onclick="cardClick(12)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf13" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf7.png?raw=true">
+				<img class="back" id="cb13" onclick="cardClick(13)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf14" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf7.png?raw=true">
+				<img class="back" id="cb14" onclick="cardClick(14)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf15" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf8.png?raw=true">
+				<img class="back" id="cb15" onclick="cardClick(15)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf16" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf8.png?raw=true">
+				<img class="back" id="cb16" onclick="cardClick(16)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf17" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf9.png?raw=true">
+				<img class="back" id="cb17" onclick="cardClick(17)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			<div class="card">
+				<img class="front" id="cf18" src="https://github.com/Kinarki/Doctor-Who-Match-Game/blob/master/cf9.png?raw=true">
+				<img class="back" id="cb18" onclick="cardClick(18)" src="https://raw.githubusercontent.com/Kinarki/Doctor-Who-Match-Game/master/cardback.jpg">
+			</div>
+			
+			
+
+
+		</div>
+	</div>
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
